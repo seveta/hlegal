@@ -1,0 +1,49 @@
+@font-face{
+    font-family: "Roboto";
+    src: 
+        local("Roboto"), url(./Roboto-Regular.woff2) format("woff2"),
+        local("Roboto"), url(./Roboto-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: "Roboto";
+    src: 
+        local("Roboto"), url(./Roboto-Medium.woff2) format("woff2"),
+        local("Roboto"), url(./Roboto-Medium.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face{
+    font-family: "Roboto";
+    src: 
+        local("Roboto"), url(./Roboto-Bold.woff2) format("woff2"),
+        local("Roboto"), url(./Roboto-Bold.woff2) format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Montserrat";
+    src: 
+        local("Montserrat"), url(./Montserrat-Regular.woff2) format("woff2"),
+        local("Montserrat"), url(./Montserrat-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: "Montserrat";
+    src: 
+        local("Montserrat"), url(./Montserrat-Medium.woff2) format("woff2"),
+        local("Montserrat"), url(./Montserrat-Medium.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face{
+    font-family: "Montserrat";
+    src: 
+        local("Montserrat"), url(./Montserrat-Bold.woff2) format("woff2"),
+        local("Montserrat"), url(./Montserrat-Bold.woff2) format("woff");
+    font-weight: 700;
+    font-style: normal;
+}

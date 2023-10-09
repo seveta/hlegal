@@ -124,12 +124,6 @@ input, button{
     margin-left: 6px;
     margin-right: 6px;
 }
-.circle{
-    height: 50px;
-    width: 50px;
-    background-color: #F5F5FA;
-    border-radius: 50%;
-}
 /*-----------------------------------*/
 .header-wrapper{
     padding-top: 50px;
@@ -184,6 +178,9 @@ input, button{
 .btn:hover{
     transform: scale(1.3);
 }
+.burger{
+    display: none;
+}
 /*-----------------------------------*/
 .main-title{
     font-size: 38px;
@@ -198,7 +195,7 @@ input, button{
 .card-img{
     border-radius: 12px;
     max-width: 400px;
-    min-height: 400px;
+    height: 400px;
     object-fit: cover; 
 }
 .cards-wrapper{
@@ -233,10 +230,40 @@ input, button{
     text-transform: uppercase;
 }
 /*-----------------------------------*/
-@media (max-width: 1024px){
+@media screen and (min-width: 1920px){
+    .container{
+        min-width: calc(1600px + 2rem);
+    }
+    .card-img{
+        min-width: 500px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1440px){
+    .container{
+        max-width: calc(904px + 2rem);
+    }
     .card-img{
         max-width: 260px;
         object-fit: cover; 
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px){
+    .container{
+        max-width: calc(904px + 2rem);
+    }
+    .card-wrapper{
+        max-width: 300px;
+    }
+    .card-img{
+        max-width: 300px;
+        object-fit: cover; 
+    }
+    .cards-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
 }
 @media (max-width: 768px){
@@ -254,16 +281,52 @@ input, button{
         "a"
         "c";
     }
-    .item-2, .item-3{
+    .item-2, .item-3, .footer-item-3{
         margin-left: 0;
     }
+    .footer-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .footer-item-3{
+        margin-top: 20px;
+    }
 }
-@media (max-width: 375px) {
+@media (max-width: 375px), (min-width:375px) and (max-width: 768px) {
+    container{
+        max-width: calc(315px + 2rem);
+    }
+    .item-1-wrapper{
+        align-items: center;
+    }
+    .burger{
+        display: inline-block;
+    }
+    .phone-header, .burger{
+        margin-left: auto;
+    }
+    .main-wrapper{
+        margin-top: 30px;
+    }
+    .main-title{
+        font-size: 30px !important;
+    }
     .cards-wrapper{
-        grid-template-columns: repeat(1, 1fr);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .card-img{
         max-width: 315px;
         min-height: 300px;
+    }
+    .footer-info, .footer-contact{
+        flex-direction: column;
+        text-align: center;
+    }
+    .dot, .adress, .facebook-header, .nav{
+        display: none;
     }
 }

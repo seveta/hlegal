@@ -5,7 +5,7 @@
   --secondary-color: #323264;
   --basic-background: #fff;
   --secondary-background: #F5F5FA;
-  --text-size: 15px;
+  --text-size: 16px;
 }
 * {
   margin: 0;
@@ -107,6 +107,9 @@ input, button{
 .fs-36px{
     font-size: 36px;
 }
+.line-height-1-5{
+    line-height: 1.5;
+}
 .gap-4px{
     gap: 4px;
 }
@@ -189,7 +192,7 @@ input, button{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: left;
-    max-width: 880px
+    max-width: 880px;
 }
 /*-----------------------------------*/
 .card-img{
@@ -207,8 +210,8 @@ input, button{
     background-color: #F5F5FA;
 }
 .footer-wrapper{
-    padding-top: 30px;
     padding-bottom: 30px;
+    padding-top: 30px;
     grid-template-areas:
         "a b"
         "c b";
@@ -230,12 +233,17 @@ input, button{
     text-transform: uppercase;
 }
 /*-----------------------------------*/
-@media screen and (min-width: 1920px){
+@media (min-width: 1920px){
     .container{
         min-width: calc(1600px + 2rem);
     }
     .card-img{
         min-width: 500px;
+    }
+    .main-title{
+        max-width: 80%;
+        display: flex;
+        justify-content: center;
     }
 }
 @media (min-width: 1024px) and (max-width: 1440px){
@@ -247,7 +255,7 @@ input, button{
         object-fit: cover; 
     }
 }
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1023px){
     .container{
         max-width: calc(904px + 2rem);
     }
@@ -294,9 +302,31 @@ input, button{
         margin-top: 20px;
     }
 }
-@media (max-width: 375px), (min-width:375px) and (max-width: 768px) {
-    container{
-        max-width: calc(315px + 2rem);
+@media (min-width:678px) and (max-width: 767px) {
+    .container{
+        max-width: calc(650px + 2rem);
+    }
+}
+@media (max-width: 375px), (min-width:375px) and (max-width: 677px) {
+    .container{
+        max-width: calc(650px + 2rem);
+    }
+    .header .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 1;
+        width: 100vw; 
+        height: 30%;
+        background-color: #F5F5FA; 
+        z-index: -1; 
+      }
+     .item-2{
+        background-color: transparent;
+    }
+    .header-wrapper{
+        padding-top: 12px;
     }
     .item-1-wrapper{
         align-items: center;
@@ -311,7 +341,7 @@ input, button{
         margin-top: 30px;
     }
     .main-title{
-        font-size: 30px !important;
+        font-size: 30px;
     }
     .cards-wrapper{
         display: flex;

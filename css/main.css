@@ -245,7 +245,7 @@ path,
 a {
   transition: all 0.2s linear;
 }
-.facebook:hover path {
+.facebook:hover path, .article-a:hover {
   color: #f0145a;
   fill: #f0145a;
 }

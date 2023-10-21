@@ -2,6 +2,17 @@
 let emailInput = document.getElementById('emailInput');
 let phoneInput = document.getElementById('phoneInput');
 let nameInput = document.getElementById('nameInput');
+$(document).ready(function(){
+    $('#slider').slick({
+        speed: 300,
+        prevArrow: false,
+        nextArrow: false,
+        dots: true,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 2
+      });
+})
 
 emailInput.addEventListener('input', function () {
     if (!isValidEmail(emailInput.value)) {
@@ -49,3 +60,4 @@ nameInput.addEventListener('blur', function () {
 function isValidName(name) {
     return /^[^\d]*$/.test(name);
 }
+

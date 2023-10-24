@@ -75,6 +75,10 @@ textarea {
 .text-align-center {
   text-align: center;
 }
+.text-align-left {
+  text-align: left;
+  display: inline-block !important;
+}
 .item-1 {
   grid-area: a;
 }
@@ -102,11 +106,17 @@ textarea {
 .mg-top-20px {
   margin-top: 20px;
 }
-.pg-top-30px {
-    padding-top: 30px;
-  }
+.mg-top-30px {
+  margin-top: 30px;
+}
 .mg-top-60px {
   margin-top: 60px;
+}
+.pg-top-30px {
+  padding-top: 30px;
+}
+.pg-bottom-60px {
+  padding-bottom: 60px;
 }
 .padding-right-left-60px {
   padding-left: 60px;
@@ -173,19 +183,24 @@ textarea {
   gap: 60px;
 }
 .dot {
-  width: 6px;
+  min-width: 6px;
   height: 6px;
   background-color: #e6e6f0;
   border-radius: 50%;
   margin-left: 6px;
   margin-right: 6px;
 }
-.max-width-100{
-    width: 100%;
+.icon-block {
+  background-color: #fff;
+  padding: 14px;
+  border-radius: 24px;
+}
+.max-width-100 {
+  width: 100%;
 }
 hr {
-    width: 650px;
-  }
+  min-width: 100%;
+}
 /*-----------------------------------*/
 .header-wrapper {
   padding-top: 50px;
@@ -214,7 +229,8 @@ hr {
   color: #b3b3ba;
 }
 .contact-input + .contact-input,
-.contact-input + .contact-message {
+.contact-input + .contact-message,
+.service-wrapper + .service-wrapper {
   margin-top: 15px;
 }
 .contact-button {
@@ -320,7 +336,7 @@ a {
 }
 .achievement {
   margin: 0 auto;
-  margin-top: 25px;
+  padding: 20px;
 }
 .slick-dots {
   display: flex;
@@ -350,6 +366,21 @@ a {
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
 }
+.publication-card {
+  max-width: 420px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.publication-card .card-img {
+  height: 200px;
+  border-radius: 8px 8px 0px 0px;
+}
+.publication-text {
+  padding: 0 30px 30px 30px;
+}
+.publication-card hr {
+  max-width: 100%;
+}
 /*-----------------------------------*/
 .about-main-left,
 .about-under-left {
@@ -367,13 +398,13 @@ a {
   background-image: url("../images/backgrounds/Team.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   display: flex;
   justify-content: center;
   align-items: center;
   object-fit: cover;
-  height: 45vh;
-  width: 100%;
+  background-size: 100% auto;
+  min-height: 44vh;
 }
 .about-team-title {
   font-size: 96px;
@@ -382,18 +413,83 @@ a {
   opacity: 0.8;
   text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
   text-align: center;
+  margin: 0 auto;
 }
 .about-under-right {
   max-width: 360px;
   text-align: left;
 }
 /*-----------------------------------*/
+.gradient {
+  background: linear-gradient(
+    229deg,
+    #323264 11.93%,
+    #323264 57.17%,
+    #643e72 87.46%
+  );
+  color: #fff !important;
+  border-radius: 0px 0px 12px 12px;
+  position: relative;
+}
+.gradient-bottom {
+  height: 10px;
+  width: 100%;
+  border-radius: 0px 0px 12px 12px;
+  background-color: #cacadb;
+  position: absolute;
+  bottom: 0;
+}
+.gradient-under-bottom {
+  margin: 0 auto;
+  height: 10px;
+  width: 99%;
+  border-radius: 0px 0px 12px 12px;
+  background-color: #e7e7f2;
+}
+.gradient .header .logo-page,
+.gradient .header .nav .link.unactive {
+  color: #fff;
+}
+.gradient .logo-wrapper svg path {
+  fill: #fff;
+}
+.gradient .logo-wrapper .hlegal-logo path:first-child {
+  fill: #f0145a;
+}
+.gradient .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.gradient .header .nav .link.unactive:hover {
+  border-bottom: 2px solid #f0145a;
+}
+.main-services {
+  height: 100vh;
+  padding-top: 160px;
+}
+.main-services-wrappper .main-title {
+  text-align: left;
+}
+.service-wrapper .dot {
+  background-color: #f0145a;
+}
+.services {
+  max-width: 600px;
+}
+/*-----------------------------------*/
 .footer,
-.about-carousel {
+.about-carousel,
+.publications {
   background-color: #f5f5fa;
 }
+.publications {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
 .footer-wrapper {
-    border-top: 2px solid #E6E6F0;
+  border-top: 2px solid #e6e6f0;
   padding-bottom: 30px;
   padding-top: 30px;
   grid-template-areas:
@@ -417,8 +513,56 @@ a {
   text-transform: uppercase;
 }
 /*-----------------------------------*/
+.burger:active {
+  cursor: pointer;
+  background-color: #e6e6f0;
+  border-radius: 6px;
+  padding-top: 5px;
+}
+.popup-wrapper {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(50, 50, 100, 0.7);
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 55;
+}
+.close {
+  display: none;
+}
+.popup-window {
+  display: none;
+  background-color: #f5f5fa;
+  position: relative;
+  padding: 2rem;
+  width: 100%;
+  max-width: 690px;
+  border-radius: 12px;
+}
+.popup-window .close {
+  display: block;
+  margin-top: 40px;
+  color: #ec6f5d;
+  font-size: 4rem;
+  transition: all 0.3 linear;
+  position: absolute;
+  right: 3rem;
+  top: 0;
+  cursor: pointer;
+}
+.popup-wrapper.active {
+  display: flex;
+}
+.popup-window.active {
+  display: block;
+}
+/*-----------------------------------*/
 @media (min-width: 1920px) {
-    .container {
+  .container {
     max-width: calc(1600px + 2rem);
   }
   .card-wrapper {
@@ -436,16 +580,26 @@ a {
   .form-help {
     min-width: 650px;
   }
-  .about-main-left, .about-under-left{
+  .about-main-left,
+  .about-under-left {
     min-width: 940px;
   }
-  .about-main-wrapper .main-title, .about-under-right .main-title{
+  .about-main-wrapper .main-title,
+  .about-under-right .main-title {
     text-align: left;
     display: inline-block;
     min-width: 350px;
   }
-  .about-team{
+  .slide {
+    max-width: 370px;
+  }
+  .about-team {
     min-height: 40vh;
+  }
+}
+@media (max-width: 1919px) {
+  .about-team {
+    min-height: 30vh;
   }
 }
 @media (min-width: 1024px) and (max-width: 1440px) {
@@ -457,17 +611,17 @@ a {
   .form-help {
     width: 510px;
   }
+  .about-team-title {
+    letter-spacing: 45px;
+  }
 }
 @media (max-width: 1250px) {
   hr,
   .form-help {
     width: 422px;
   }
-  .about-team{
-    height: 35vh;
-    min-width: 100%;
-  }
-  .about-main-left, .about-under-left{
+  .about-main-left,
+  .about-under-left {
     max-width: 480px;
   }
 }
@@ -490,6 +644,13 @@ a {
   .form-help,
   hr {
     width: 650px;
+  }
+  .about-team-title {
+    font-size: 66px;
+    letter-spacing: 45px;
+  }
+  .about-team {
+    min-height: 20vh;
   }
 }
 
@@ -535,14 +696,24 @@ a {
   hr {
     width: 650px;
   }
-  .about-main-wrapper, .about-under-wrapper{
+  .about-main-wrapper,
+  .about-under-wrapper {
     flex-direction: column;
   }
-  .about-main-left, .about-under-left, .about-under-right .main-title{
+  .about-main-left,
+  .about-under-left,
+  .main-title {
     max-width: 650px;
   }
-  .about-team{
-    height: 30vh;
+  .about-team {
+    min-height: 18vh;
+  }
+  .about-under-right {
+    min-width: 100%;
+  }
+  .about-team-title {
+    font-size: 46px;
+    letter-spacing: 40px;
   }
 }
 @media (min-width: 489px) and (max-width: 677px) {
@@ -562,6 +733,9 @@ a {
     height: 30%;
     background-color: #f5f5fa;
     z-index: -1;
+  }
+  .logo-page {
+    font-size: 20px;
   }
   .item-2 {
     background-color: transparent;
@@ -605,8 +779,64 @@ a {
   .nav {
     display: none;
   }
+  .burger-nav-wrapper.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 55;
+    background-color: rgba(50, 50, 100, 0.7);
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+  }
+  .nav.active {
+    padding: 2rem;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    gap: 22px;
+    background: #fff;
+    padding: 64px 12px 12px 12px;
+    border-radius: 12px 12px 0px 0px;
+  }
+  .nav.active .link {
+    border-radius: 12px;
+    background-color: #f5f5fa;
+    border: none;
+    padding: 7px 112px;
+  }
+  .nav .link:focus {
+    background-color: #e6e6f0;
+  }
+  .nav.active .close {
+    display: block;
+    font-size: 38px;
+    position: absolute;
+    right: 2rem;
+    top: 0.5rem;
+    color: #f0145a;
+  }
   .form-help,
   hr {
     width: 315px;
+  }
+  .about-team {
+    min-height: 16vh;
+  }
+  .about-team-title {
+    font-size: 26px;
+    letter-spacing: 13px;
+  }
+  .about-main-right {
+    max-width: 350px !important ;
+    min-width: 0px;
+  }
+  .slick-track {
+    margin: auto 20px;
   }
 }

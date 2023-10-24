@@ -10,8 +10,47 @@ $(document).ready(function(){
         dots: true,
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 2
+        slidesToScroll: 2,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3
+      }
+              },
+            {
+              breakpoint: 680,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
+            }
+          ]
       });
+})
+
+$('.popupBtn').click(function (event) {
+    $('.popup-wrapper').addClass('active');
+    const target = $(this).data('target');
+    $(target).addClass('active');
+});
+
+$('.popup-wrapper, .popup-window .close, .nav .close, .burger-nav-wrapper').click(function (event) {
+
+    if (this === event.target){
+        $('.popup-wrapper').removeClass('active');
+        $('.popup-window').removeClass('active');
+        $('.burger-nav-wrapper').removeClass('active');
+        $('.nav').removeClass('active');
+    }
+
+})
+
+$('.burger').click(function(event) {
+    $('.nav').addClass('active');
+    $('.burger-nav-wrapper').addClass('active');
+    const target = $(this).data('target');
+    $(target).addClass('active');
 })
 
 emailInput.addEventListener('input', function () {

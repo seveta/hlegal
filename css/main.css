@@ -191,6 +191,7 @@ textarea {
   margin-right: 6px;
 }
 .icon-block {
+  max-width: 92px;
   background-color: #fff;
   padding: 14px;
   border-radius: 24px;
@@ -201,6 +202,9 @@ textarea {
 hr {
   min-width: 100%;
 }
+p {
+  margin-bottom: 0;
+}
 /*-----------------------------------*/
 .header-wrapper {
   padding-top: 50px;
@@ -208,10 +212,9 @@ hr {
     "a b"
     "a c";
 }
-.publications-wrapper{
-    grid-template-areas:
-    "a b c";
-    gap: 30px;
+.publications-wrapper {
+  grid-template-areas: "a b c";
+  gap: 30px;
 }
 .form-help {
   background-color: #f5f5fa;
@@ -267,7 +270,8 @@ hr {
 .link {
   color: #24a3ff;
 }
-.link.email:hover {
+.link.email:hover,
+.hover:hover {
   color: #f0145a;
 }
 .language {
@@ -292,8 +296,12 @@ hr {
   border-bottom: 2px solid #f0145a;
   padding-bottom: 5px;
 }
+.btn {
+  padding: 0;
+}
 .facebook path,
 .btn,
+.hover,
 circle,
 path,
 a {
@@ -307,7 +315,9 @@ a {
 .btn:hover circle {
   fill: #ededf7;
 }
-.btn:hover path {
+.btn:hover path,
+.anchor:hover path,
+.anchor:hover circle {
   stroke: #f0145a;
 }
 .btn:hover {
@@ -469,6 +479,17 @@ a {
 .gradient .header .nav .link.unactive:hover {
   border-bottom: 2px solid #f0145a;
 }
+.main-services {
+  min-height: 100vh;
+}
+.main-services.main {
+  background: url("../images/logo/Symbol.png") no-repeat center/contain;
+}
+.main-services.main .container {
+  justify-content: center;
+  height: 100vh;
+  padding-top: 0;
+}
 .main-services .container {
   height: 100%;
   padding-top: 160px;
@@ -481,6 +502,36 @@ a {
 }
 .services {
   max-width: 100%;
+}
+/*-----------------------------------*/
+.anchor {
+  position: absolute;
+  bottom: 1rem;
+}
+.main-nav-wrapper .line {
+  width: 4px;
+  min-width: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-left: 60px;
+  margin-right: 60px;
+  align-self: stretch;
+}
+.main-nav-wrapper .nav-pills .nav-link {
+  background-color: transparent;
+  color: #b3b3ba;
+  white-space: nowrap;
+  font-size: 38px;
+  text-align: right;
+  transition: all 0.2s linear;
+}
+.main-nav-wrapper .nav-pills .nav-link:hover {
+  color: #f0145a;
+}
+.main-nav-wrapper .nav-pills .nav-link.active {
+  background: linear-gradient(90deg, #ef8080 0.84%, #f0145a 99.96%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /*-----------------------------------*/
 .footer,
@@ -500,13 +551,16 @@ a {
     "a b"
     "c b";
 }
-.footer-item-1, .item-1 {
+.footer-item-1,
+.item-1 {
   grid-area: a;
 }
-.footer-item-2, .item-3 {
+.footer-item-2,
+.item-3 {
   grid-area: c;
 }
-.footer-item-3, .item-2 {
+.footer-item-3,
+.item-2 {
   grid-area: b;
 }
 .footer-wrapper .dot {
@@ -642,8 +696,7 @@ a {
     align-items: center;
     justify-content: center;
   }
-  .form-help
-  {
+  .form-help {
     max-width: 100%;
   }
   .about-team-title {
@@ -654,7 +707,17 @@ a {
     min-height: 20vh;
   }
 }
-
+@media (max-width: 992px) {
+  .main-services.main,
+  .main-services.main .container {
+    height: initial;
+    min-height: initial;
+    aspect-ratio: 1/1.6;
+  }
+  .main-services.main {
+    background-size: cover;
+  }
+}
 @media (max-width: 768px) {
   .cards-wrapper {
     display: flex;
@@ -693,8 +756,7 @@ a {
     align-items: center;
     justify-content: center;
   }
-  .form-help
-  {
+  .form-help {
     max-width: 100%;
   }
   .about-main-wrapper,
@@ -716,24 +778,48 @@ a {
     font-size: 46px;
     letter-spacing: 40px;
   }
-  .publications-wrapper{
-    grid-template-areas: 
-    "a b"
-    "c c";
+  .publications-wrapper {
+    grid-template-areas:
+      "a b"
+      "c c";
   }
-  .main-services-wrapper{
+  .main-services-wrapper {
     padding-top: 120px;
   }
-  .main-services-wrapper-under{
+  .main-services-wrapper-under {
     flex-direction: column;
   }
-  .service-wrapper.dot{
+  .service-wrapper.dot {
     display: inline-block !important;
+  }
+  .main-nav-wrapper .nav-wrapper {
+    flex-direction: column;
+  }
+  .main-nav-wrapper .nav-wrapper .nav {
+    display: flex;
+  }
+  .main-nav-wrapper .line {
+    width: 100%;
+    height: 4px;
+    margin: 90px 0;
+  }
+  .main-nav-wrapper .nav-pills {
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    position: absolute;
+    transform: translateX(6px);
+    max-width: calc(100vw) !important;
+    padding-left: -1rem;
+    padding-right: -1rem;
+  }
+  .main-nav-wrapper .nav-pills .nav-link,
+  .nav-link.active {
+    font-size: 30px;
   }
 }
 @media (min-width: 489px) and (max-width: 677px) {
-  .form-help
-   {
+  .form-help {
     max-width: 100%;
   }
 }
@@ -831,10 +917,10 @@ a {
   .nav .link:focus {
     background-color: #e6e6f0;
   }
-  .gradient .nav .link{
+  .gradient .nav .link {
     color: #0085ff !important;
   }
-  .gradient .nav .link.active{
+  .gradient .nav .link.active {
     color: #f0145a !important;
   }
   .nav.active .close {
@@ -845,8 +931,7 @@ a {
     top: 0.5rem;
     color: #f0145a;
   }
-  .form-help
-   {
+  .form-help {
     width: 100%;
   }
   .about-team {
@@ -863,27 +948,28 @@ a {
   .slick-track {
     margin: auto 20px;
   }
-  .publications-wrapper{
-    grid-template-areas: "a"
-    "b"
-    "c";
+  .publications-wrapper {
+    grid-template-areas:
+      "a"
+      "b"
+      "c";
   }
-  .service-wrapper .dot{
+  .service-wrapper .dot {
     display: inline-block !important;
   }
-  .gradient .header .container::before{
-    background: rgba(245, 245, 250, 0.20);
+  .gradient .header .container::before {
+    background: rgba(245, 245, 250, 0.2);
   }
-  .main-services-wrapper{
+  .main-services-wrapper {
     padding-top: 30px !important;
   }
-  .main-services-wrapper .main-title{
+  .main-services-wrapper .main-title {
     text-align: center;
   }
-  .publications-wrapper{
+  .publications-wrapper {
     max-width: 100%;
   }
-  .publications-wrapperr{
+  .publications-wrapperr {
     padding-left: 30px !important;
     padding-right: 30px !important;
   }

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../fonts/fonts.css">
     <title>Hlegal</title>
@@ -73,13 +74,13 @@
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M15.1752 0H21L5.82482 47H0L15.1752 0Z" fill="#F0145A" />
                                 </svg>
-                                <p class="logo-page fs-36px color-323264">services</p>
                                 <div class="burger">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
-                                        <path d="M7 10.5H25" stroke="white" stroke-width="2"/>
-                                        <path d="M7 16.5H25" stroke="white" stroke-width="2"/>
-                                        <path d="M7 22.5H25" stroke="white" stroke-width="2"/>
-                                      </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33"
+                                        fill="none">
+                                        <path d="M7 10.5H25" stroke="white" stroke-width="2" />
+                                        <path d="M7 16.5H25" stroke="white" stroke-width="2" />
+                                        <path d="M7 22.5H25" stroke="white" stroke-width="2" />
+                                    </svg>
                                 </div>
                             </div>
                         </div>
@@ -108,7 +109,7 @@
                                 <nav class="nav">
                                     <span class="close">&times;</span>
                                     <a class="link unactive" href="./about.html">about us</a>
-                                    <a class="link active" href="./services.html">services</a>
+                                    <a class="link unactive" href="./services.html">services</a>
                                     <a class="link unactive" href="../index.html">team</a>
                                     <a class="link unactive" href="#">publications</a>
                                     <a class="link unactive" href="./contact.html">contact</a>
@@ -118,88 +119,149 @@
                     </div>
                 </div>
             </header>
-            <section class="main-services">
+            <section class="main-services main">
+                <div class="container display-flex align-items-center flex-direction-column">
+                    <h1>you legal solutions provider</h1>
+                    <a class="anchor" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                            <g clip-path="url(#clip0_22728_11340)">
+                                <circle opacity="0.5" cx="21" cy="21" r="20" stroke="white" stroke-width="2" />
+                                <path d="M12 18L21 27L30 18" stroke="white" stroke-width="2" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_22728_11340">
+                                    <rect width="42" height="42" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+            </section>
+            <section class="main-nav mg-top-60px">
                 <div class="container">
-                    <div
-                        class="main-services-wrapper padding-right-left-60px display-flex align-items-center justify-content-center flex-direction-column">
-                        <div class="icon-block">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"
-                                fill="none">
-                                <path
-                                    d="M23.7339 28.125C24.8379 28.125 25.7339 27.229 25.7339 26.125V18.325C25.7339 14.838 28.5709 12 32.0579 12C35.5449 12 38.3829 14.838 38.3829 18.325V26.125C38.3829 27.229 39.2779 28.125 40.3829 28.125C41.4869 28.125 42.3829 27.229 42.3829 26.125V18.325C42.3839 12.632 37.7519 8 32.0579 8C26.3659 8 21.7339 12.632 21.7339 18.325V26.125C21.7339 27.229 22.6299 28.125 23.7339 28.125Z"
-                                    fill="url(#paint0_linear_22728_9027)" />
-                                <path
-                                    d="M55 23.6309H44.384V26.1249C44.384 28.3309 42.59 30.1249 40.384 30.1249C38.178 30.1249 36.384 28.3309 36.384 26.1249V23.6309H27.735V26.1249C27.735 28.3309 25.941 30.1249 23.735 30.1249C21.529 30.1249 19.735 28.3309 19.735 26.1249V23.6309H8.99997C8.44797 23.6309 8.10697 24.0659 8.23797 24.6019L15.236 53.0989C15.658 54.7009 17.344 55.9999 19 55.9999H45C46.658 55.9999 48.342 54.7009 48.766 53.0989L55.762 24.6019C55.893 24.0649 55.553 23.6309 55 23.6309Z"
-                                    fill="url(#paint1_linear_22728_9027)" />
-                                <path
-                                    d="M28.6001 34.4C28.6001 33.6265 29.2266 33 30.0001 33C30.7736 33 31.4001 33.6265 31.4001 34.4V41.35L31.4001 40C31.4001 39.2265 32.0266 38.6 32.8001 38.6C33.5736 38.6 34.2001 39.2265 34.2001 40V41.6764C34.2127 40.9141 34.8346 39.3 35.6 39.3C36.3731 39.3 36.9999 39.9268 37 40.7C37 40.7 37.0411 41.7411 37.1332 41.8033C37.3572 41.3285 37.8402 40 38.4 40C39.1732 40 39.8 40.6268 39.8 41.4V48.4C39.8 49.9463 38.5463 51.2 37 51.2H32.3198C30.8344 51.2 29.4099 50.6099 28.3599 49.5599L26.15 47.35L23 45.9402C23.0051 44.6033 24.0526 44.2 25.1 44.2C26.0023 44.2 26.8136 44.3407 28.6 45.25L28.6001 34.4Z"
-                                    fill="white" />
-                                <defs>
-                                    <linearGradient id="paint0_linear_22728_9027" x1="32.0584" y1="8" x2="32.0584"
-                                        y2="28.125" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#EF8080" />
-                                        <stop offset="1" stop-color="#F0145A" />
-                                    </linearGradient>
-                                    <linearGradient id="paint1_linear_22728_9027" x1="32" y1="23.6309" x2="32"
-                                        y2="55.9999" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#EF8080" />
-                                        <stop offset="1" stop-color="#F0145A" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
+                    <div class="main-nav-wrapper">
+                        <div
+                            class="nav-wrapper d-flex align-items-center justify-content-space-between padding-right-left-60px">
+                            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
+                                <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                                    aria-selected="true">Consistent</button>
+                                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-profile" type="button" role="tab"
+                                    aria-controls="v-pills-profile" aria-selected="false">Customer oriented</button>
+                                <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-messages" type="button" role="tab"
+                                    aria-controls="v-pills-messages" aria-selected="false">Innovative</button>
+                                <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+                                    data-bs-target="#v-pills-settings" type="button" role="tab"
+                                    aria-controls="v-pills-settings" aria-selected="false">Business oriented</button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                    aria-labelledby="v-pills-home-tab">
+                                    <h2 class="fs-30px">We turn the idea of legal services</h2>
+                                    <p class="mg-top-30px fs-19px">Consolidating many years of experience and practice,
+                                        the company's lawyers accompany complex projects and achieve a number of
+                                        important decisions for the industry. Many of them form the practice of applying
+                                        the law of the sea in Ukraine.</p>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                    aria-labelledby="v-pills-profile-tab">
+                                    <h2 class="fs-30px">We turn the idea of legal services</h2>
+                                    <p class="mg-top-30px fs-19px">Consolidating many years of experience and practice,
+                                        the company's lawyers accompany complex projects and achieve a number of
+                                        important decisions for the industry. Many of them form the practice of applying
+                                        the law of the sea in Ukraine.</p>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                    aria-labelledby="v-pills-messages-tab">
+                                    <h2 class="fs-30px">We turn the idea of legal services</h2>
+                                    <p class="mg-top-30px fs-19px">Consolidating many years of experience and practice,
+                                        the company's lawyers accompany complex projects and achieve a number of
+                                        important decisions for the industry. Many of them form the practice of applying
+                                        the law of the sea in Ukraine.</p>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                                    aria-labelledby="v-pills-settings-tab">
+                                    <h2 class="fs-30px">We turn the idea of legal services</h2>
+                                    <p class="mg-top-30px fs-19px">Consolidating many years of experience and practice,
+                                        the company's lawyers accompany complex projects and achieve a number of
+                                        important decisions for the industry. Many of them form the practice of applying
+                                        the law of the sea in Ukraine.</p>
+                                </div>
+                            </div>
                         </div>
-                        <h1 class="main-title mg-top-30px">IT and e-commerce</h1>
-                        <p class="text-align-center fs-19px mg-top-30px">An endless stream of contracts, tax issues,
-                            labor relations, corporate papers - legal work distracts you from doing business. But there
-                            is not much work to do to hire an in-house lawyer.</p>
-                        <p class="text-align-center fs-19px mg-top-20px">In addition, over time, the work will become
-                            the same type and uninteresting for a full-time lawyer. And we know very well how difficult
-                            it is to find a good candidate with experience in the field of information technology in
-                            Ukraine.</p>
-                        <button  class="popupBtn contact-button mg-top-30px" data-target="#myWindow">Free consultation</button>
                     </div>
-                    <hr class="hr mg-top-60px">
-                    <h3 class="fs-21px mg-top-30px">Services in this area:</h3>
-                    <div
-                        class="main-services-wrapper-under display-flex  justify-content-center mg-top-30px gap-60px">
-                        <div class="services fs-19px ">
-                            <div class="service-wrapper display-flex align-items-center gap-7px">
-                                <span class="dot"></span>
-                                <p>support of procedures related to the lease of state property in the port;</p>
+                </div>
+            </section>
+            <section class="main-cards mg-top-60px">
+                <div class="container">
+                    <div class="publications-wrapperr display-flex flex-direction-column padding-right-left-60px">
+                        <a class="link article-a uppercase fw-700 letter-spacing-1" href="#">services
+                            <svg class="btn" xmlns="http://www.w3.org/2000/svg" width="12" height="13"
+                                viewBox="0 0 12 13" fill="none">
+                                <path d="M3.5 2L8 6.5L3.5 11" stroke="#24A3FF" stroke-width="2" />
+                            </svg>
+                        </a>
+                        <h2 class="main-title display-flex align-items-center text-align-left mg-top-10px ">What can we
+                            do better than others?</h2>
+                        <div class="cards-wrapper grid mg-top-60px">
+                            <div class="main-card">
+                                <div class="icon-block">
+                                    <img src="../images/icons/Ecommerce.svg" alt="Ecommerce">
+                                </div>
+                                <h3 class="link hover mg-top-30px fs-21px">IT and e-commerce</h3>
+                                <p class="mg-top-15px">An endless stream of contracts, tax issues, labor relations,
+                                    corporate papers - legal work distracts you from doing business. But there is not
+                                    much work to do to hire an in-house lawyer.</p>
                             </div>
-                            <div class="service-wrapper display-flex align-items-center gap-7px">
-                                <span class="dot"></span>
-                                <p>support of procedures related to confirmation of the status of port operator,
-                                    maritime agent, foreign sailing line;</p>
+                            <div class="main-card">
+                                <div class="icon-block">
+                                    <img src="../images/icons/Support.svg" alt="Support">
+                                </div>
+                                <h3 class="link hover mg-top-30px fs-21px">Comprehensive daily
+                                    legal support</h3>
+                                <p class="mg-top-15px">In addition, over time, the work will become the same type and
+                                    uninteresting for a full-time lawyer. And we know very well how difficult it is to
+                                    find a good candidate with experience in the field of information technology in
+                                    Ukraine.</p>
                             </div>
-                            <div class="service-wrapper display-flex align-items-center gap-7px">
-                                <span class="dot"></span>
-                                <p>support of procedures related to the inclusion of the company within the port;</p>
+                            <div class="main-card">
+                                <div class="icon-block">
+                                    <img src="../images/icons/Coprorate.svg" alt="Coprorate">
+                                </div>
+                                <h3 class="link hover mg-top-30px fs-21px">Structuring corporate relationships</h3>
+                                <p class="mg-top-15px">Instead of just providing legal services, we will hire a lawyer
+                                    or a whole team that will fit into the daily life of your company.</p>
                             </div>
-                            <div class="service-wrapper display-flex align-items-center gap-7px">
-                                <span class="dot"></span>
-                                <p>appeals against actions related to the illegal imposition of services in the port by
-                                    monopoly companies.</p>
+                            <div class="main-card">
+                                <div class="icon-block">
+                                    <img src="../images/icons/Trust.svg" alt="Trust">
+                                </div>
+                                <h3 class="link hover mg-top-30px fs-21px">Building contractual relations</h3>
+                                <p class="mg-top-15px">Once a week, or week after month, you have your own lawyer by
+                                    your side. Anyone in the company can catch it at the coffee maker and just talk
+                                    about current affairs instead of waiting for update status.</p>
                             </div>
-                        </div>
-                        <div class="services fs-19px">
-                            <div class="service-wrapper display-flex align-items-center gap-7px">
-                                <span class="dot"></span>
-                                <p>support of investment projects for the development of port infrastructure;</p>
+                            <div class="main-card">
+                                <div class="icon-block">
+                                    <img src="../images/icons/Protection.svg" alt="Protection">
+                                </div>
+                                <h3 class="link hover mg-top-30px fs-21px">Protection of business, intellectual property
+                                </h3>
+                                <p class="mg-top-15px">And all the other time he will work on new diverse projects, so
+                                    he will definitely not stop in professional development. One way or another, all
+                                    Axon Partners will work for you instead of a corporate lawyer.</p>
                             </div>
-                            <div class="service-wrapper display-flex align-items-center gap-7px">
-                                <span class="dot"></span>
-                                <p>certification of GTS, entering information about them in mandatory databases and
-                                    registers;</p>
-                            </div>
-                            <div class="service-wrapper display-flex align-items-center gap-7px">
-                                <span class="dot"></span>
-                                <p>registration of permits for the construction of port terminals;</p>
-                            </div>
-                            <div class="service-wrapper display-flex align-items-center gap-7px">
-                                <span class="dot"></span>
-                                <p>registration of permit and other mandatory documentation required for carrying out
-                                    activities in the port (emission permit, conclusion on EIA, RTC, etc.);</p>
+                            <div class="main-card">
+                                <div class="icon-block">
+                                    <img src="../images/icons/Court.svg" alt="Court">
+                                </div>
+                                <h3 class="link hover mg-top-30px fs-21px">Judicial representation</h3>
+                                <p class="mg-top-15px">Is it a small, medium-sized company or a market leader? Local
+                                    business or multinational company? Do you have your own legal department or not?</p>
                             </div>
                         </div>
                     </div>
@@ -212,11 +274,12 @@
             <div class="container">
                 <div class="publications-wrapperr display-flex flex-direction-column padding-right-left-60px">
                     <a class="link article-a uppercase fw-700 letter-spacing-1" href="#">Publications
-                        <svg class="btn" xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
-                            <path d="M3.5 2L8 6.5L3.5 11" stroke="#24A3FF" stroke-width="2"/>
-                         </svg>
+                        <svg class="btn" xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13"
+                            fill="none">
+                            <path d="M3.5 2L8 6.5L3.5 11" stroke="#24A3FF" stroke-width="2" />
+                        </svg>
                     </a>
-                    <h2 class="main-title text-align-left mg-top-10px ">Recommended</h2>
+                    <h2 class="main-title text-align-left mg-top-10px ">We have something to tell</h2>
                     <div class="publications-wrapper grid mg-top-30px">
                         <div class="publication-card item-1">
                             <img class="card-img" src="../images/publications/Publication-1.jpg" alt="">
@@ -224,25 +287,29 @@
                                 <a href="#" class="link article-a fw-700 mg-top-15px">Equity associate</a>
                                 <p class="mg-top-15px fs-12px uppercase letter-spacing-1">April 22</p>
                                 <hr class="mg-top-15px">
-                                <p class="mg-top-15px fs-14px color-000">I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering my parents told me that if I…</p>
+                                <p class="mg-top-15px fs-14px color-000">I'm a jun on projects. I am a co-owner of a law
+                                    firm. How it happened. Before entering my parents told me that if I…</p>
                             </div>
                         </div>
                         <div class="publication-card item-2">
                             <img class="card-img" src="../images/publications/Publication-2.jpg" alt="">
                             <div class="publication-text mg-top-15px">
-                                <a href="#" class="link article-a fw-700 mg-top-15px">Equity associate</a>
+                                <a href="#" class="link article-a fw-700 mg-top-15px">Penalty for the Good Corporation:
+                                    what will happen to Google and others for violating the GDPR</a>
                                 <p class="mg-top-15px fs-12px uppercase letter-spacing-1">April 22</p>
                                 <hr class="mg-top-15px">
-                                <p class="mg-top-15px fs-14px color-000">And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.</p>
+                                <p class="mg-top-15px fs-14px color-000">I'm a jun on projects. I am a co-owner of a law
+                                    firm. How it happened. Before entering my parents told me that if I…</p>
                             </div>
                         </div>
                         <div class="publication-card item-3">
                             <img class="card-img" src="../images/publications/Publication-3.jpg" alt="">
                             <div class="publication-text mg-top-15px">
-                                <a href="#" class="link article-a fw-700 mg-top-15px">Equity associate</a>
+                                <a href="#" class="link article-a fw-700 mg-top-15px">Millennial Testament</a>
                                 <p class="mg-top-15px fs-12px uppercase letter-spacing-1">April 22</p>
                                 <hr class="mg-top-15px">
-                                <p class="mg-top-15px fs-14px color-000">What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation X looks like this: an apartment in…</p>
+                                <p class="mg-top-15px fs-14px color-000">I'm a jun on projects. I am a co-owner of a law
+                                    firm. How it happened. Before entering my parents told me that if I…</p>
                             </div>
                         </div>
                     </div>
@@ -287,23 +354,7 @@
             </div>
         </div>
     </footer>
-    <div class="popup-wrapper">
-        <div id="myWindow" class="popup-window">
-            <form class="form-help display-flex flex-direction-column" action="#">
-                <h3 class="main-title fs-30px fw-700 mg-bottom-30px">We would like to help you</h3>
-                <span class="close">&times;</span>
-                <input class="contact-input" id="nameInput" type="name" placeholder="Name">
-                <textarea class="contact-message mg-bottom-30px" name="" id="" cols="30" rows="5"
-                    placeholder="Message"></textarea>
-                <p>How to answer you?</p>
-                <input class="contact-input mg-top-15px" id="phoneInput" type="number" name="" id=""
-                    placeholder="Phone number">
-                <input class="contact-input mg-bottom-30px" id="emailInput" type="email"
-                    placeholder="Email">
-                <button class="contact-button">Send message</button>
-            </form>
-        </div>
-    </div>
+    <script src="../assets/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
     <script src="../assets/jquery/jquery-3.7.1.js"></script>
     <script src="../js/common.js"></script>
 </body>

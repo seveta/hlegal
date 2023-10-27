@@ -2,6 +2,49 @@
 let emailInput = document.getElementById('emailInput');
 let phoneInput = document.getElementById('phoneInput');
 let nameInput = document.getElementById('nameInput');
+
+
+$('.popupBtn').click(function (event) {
+    $('.popup-wrapper').addClass('active');
+    const target = $(this).data('target');
+    $(target).addClass('active');
+});
+
+$('.popup-wrapper, .popup-window .close, .nav .close, .burger-nav-wrapper').click(function (event) {
+
+    if (this === event.target){
+        $('.popup-wrapper').removeClass('active');
+        $('.popup-window').removeClass('active');
+        $('.burger-nav-wrapper').removeClass('active');
+        $('.nav').removeClass('active');
+    }
+
+})
+
+$('.burger').click(function(event) {
+    $('.nav').addClass('active');
+    $('.burger-nav-wrapper').addClass('active');
+    const target = $(this).data('target');
+    $(target).addClass('active');
+})
+
+
+function scrollToElem(event, elem){
+    event.preventDefault()
+    const target = document.querySelector(elem.hash)
+    window.scrollTo({
+        top: target.offsetTop,
+        behavior: "smooth",
+    })
+};
+
+$('#main-slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+  });
+
 $(document).ready(function(){
     $('#slider').slick({
         speed: 300,
@@ -27,30 +70,6 @@ $(document).ready(function(){
             }
           ]
       });
-})
-
-$('.popupBtn').click(function (event) {
-    $('.popup-wrapper').addClass('active');
-    const target = $(this).data('target');
-    $(target).addClass('active');
-});
-
-$('.popup-wrapper, .popup-window .close, .nav .close, .burger-nav-wrapper').click(function (event) {
-
-    if (this === event.target){
-        $('.popup-wrapper').removeClass('active');
-        $('.popup-window').removeClass('active');
-        $('.burger-nav-wrapper').removeClass('active');
-        $('.nav').removeClass('active');
-    }
-
-})
-
-$('.burger').click(function(event) {
-    $('.nav').addClass('active');
-    $('.burger-nav-wrapper').addClass('active');
-    const target = $(this).data('target');
-    $(target).addClass('active');
 })
 
 emailInput.addEventListener('input', function () {

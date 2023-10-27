@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial scale=1.0">
     <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/slick/slick.css" />
+    <link rel="stylesheet" href="../assets/slick/slick-theme.css" />
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../fonts/fonts.css">
     <title>Hlegal</title>
@@ -122,7 +124,7 @@
             <section class="main-services main">
                 <div class="container display-flex align-items-center flex-direction-column">
                     <h1>you legal solutions provider</h1>
-                    <a class="anchor" href="#">
+                    <a class="anchor" href="#logos" onclick="scrollToElem(event, this)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
                             <g clip-path="url(#clip0_22728_11340)">
                                 <circle opacity="0.5" cx="21" cy="21" r="20" stroke="white" stroke-width="2" />
@@ -270,6 +272,116 @@
             <div class="gradient-bottom"></div>
         </div>
         <div class="gradient-under-bottom"></div>
+        <section class="main-carousel mg-top-60px mg-bottom-90px">
+            <div class="container">
+                <div class="main-carousel-wrapper padding-right-left-60px">
+                    <div id="main-slider">
+                        <div class="main-slide flex-direction-row gap-30px">
+                            <div class="main-slide-img">
+                                <img class="main-image" src="../images/team/Team-1.jpg" alt="">
+                            </div>
+                            <div class="main-slide-article display-flex flex-direction-column">
+                                <a class="link article-a uppercase fw-700 letter-spacing-1 mg-top-30px"
+                                    href="#">services
+                                    <svg class="btn" xmlns="http://www.w3.org/2000/svg" width="12" height="13"
+                                        viewBox="0 0 12 13" fill="none">
+                                        <path d="M3.5 2L8 6.5L3.5 11" stroke="#24A3FF" stroke-width="2" />
+                                    </svg>
+                                </a>
+                                <p class="main-title fw-700 max-width-100">
+                                    Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну
+                                    допомогу, навіть у ситуаціях, коли більшість безсилі.
+                                </p>
+                                <p class="color-B3B3BA fw-700 mg-top-30px">Олександр Олександровський</p>
+                                <p class="color-B3B3BA fs-14px pg-bottom-30px ">Керуючий партнер</p>
+                            </div>
+                        </div>
+                        <div class="main-slide gap-30px">
+                            <div class="main-slide-img">
+                                <img class="main-image" src="../images/team/Team-2.jpg" alt="">
+                            </div>
+                            <div class="main-slide-article display-flex flex-direction-column">
+                                <a class="link article-a uppercase fw-700 letter-spacing-1 mg-top-30px"
+                                    href="#">services
+                                    <svg class="btn" xmlns="http://www.w3.org/2000/svg" width="12" height="13"
+                                        viewBox="0 0 12 13" fill="none">
+                                        <path d="M3.5 2L8 6.5L3.5 11" stroke="#24A3FF" stroke-width="2" />
+                                    </svg>
+                                </a>
+                                <p class="main-title fw-700 max-width-100">
+                                    Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну
+                                    допомогу, навіть у ситуаціях, коли більшість безсилі.
+                                </p>
+                                <p class="color-B3B3BA fw-700 mg-top-30px">Олександр Олександровський</p>
+                                <p class="color-B3B3BA fs-14px pg-bottom-30px ">Керуючий партнер</p>
+                            </div>
+                        </div>
+                        <div class="main-slide gap-30px">
+                            <div class="main-slide-img">
+                                <img class="main-image" src="../images/team/Team-3.jpg" alt="">
+                            </div>
+                            <div class="main-slide-article display-flex flex-direction-column">
+                                <a class="link article-a uppercase fw-700 letter-spacing-1 mg-top-30px"
+                                    href="#">services
+                                    <svg class="btn" xmlns="http://www.w3.org/2000/svg" width="12" height="13"
+                                        viewBox="0 0 12 13" fill="none">
+                                        <path d="M3.5 2L8 6.5L3.5 11" stroke="#24A3FF" stroke-width="2" />
+                                    </svg>
+                                </a>
+                                <p class="main-title fw-700 max-width-100">
+                                    Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну
+                                    допомогу, навіть у ситуаціях, коли більшість безсилі.
+                                </p>
+                                <p class="color-B3B3BA fw-700 mg-top-30px ">Олександр Олександровський</p>
+                                <p class="color-B3B3BA fs-14px pg-bottom-30px ">Керуючий партнер</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-logos mg-top-60px">
+            <h3 class="text-align-center fs-14px letter-spacing-1 uppercase color-323264 fw-700 mg-bottom-30px">They
+                already trust us</h3>
+            <div id="logos" class="logos-wrapper grid">
+                <div class="logo-item background-1C4280 display-flex align-items-center justify-content-center">
+                    <img src="../images/logotypes/hillel.png" alt="Hillel logo">
+                </div>
+                <div class="logo-item background-143646 display-flex align-items-center justify-content-center">
+                    <img src="../images/logotypes/wannabiz.png" alt="Wannabiz logo">
+                </div>
+                <div class="logo-item background-F48B30 display-flex align-items-center justify-content-center">
+                    <img src="../images/logotypes/tapgerine.png" alt="Tapgerine logo">
+                </div>
+                <div class="logo-item background-9E4DC3 display-flex align-items-center justify-content-center">
+                    <img src="../images/logotypes/3dlook.png" alt="3dlook logo">
+                </div>
+                <div class="logo-item background-F48B30 display-flex align-items-center justify-content-center">
+                    <img src="../images/logotypes/orangear.png" alt="Orangear logo">
+                </div>
+                <div class="logo-item background-E2E2E4 display-flex align-items-center justify-content-center">
+                    <img src="../images/logotypes/adtelligent.png" alt="Adtelligent logo">
+                </div>
+                <div class="logo-item background-C71C36 display-flex align-items-center justify-content-center">
+                    <img src="../images/logotypes/clickky.png" alt="Clickky logo">
+                </div>
+                <div class="logo-item background-DCF3F9 display-flex align-items-center justify-content-center">
+                    <img src="../images/logotypes/eco-leasing.png" alt="Eco-leasing logo">
+                </div>
+                <div class="logo-item background-EAEAEA display-flex align-items-center justify-content-center">
+                    <img src="../images/logotypes/ingratek.png" alt="ingratek logo">
+                </div>
+                <div class="logo-item background-282240 display-flex align-items-center justify-content-center">
+                    <img src="../images/logotypes/city-par.png" alt="City-par logo">
+                </div>
+                <div class="logo-item background-1D4568 display-flex align-items-center justify-content-center">
+                    <img src="../images/logotypes/artprint.png" alt="Artprint logo">
+                </div>
+                <div class="logo-item background-000 display-flex align-items-center justify-content-center">
+                    <img src="../images/logotypes/ultimatecard.png" alt="Ultimatecard logo">
+                </div>
+            </div>
+        </section>
         <section class="publications mg-top-60px">
             <div class="container">
                 <div class="publications-wrapperr display-flex flex-direction-column padding-right-left-60px">
@@ -356,6 +468,7 @@
     </footer>
     <script src="../assets/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
     <script src="../assets/jquery/jquery-3.7.1.js"></script>
+    <script src="../assets/slick/slick.min.js"></script>
     <script src="../js/common.js"></script>
 </body>
 

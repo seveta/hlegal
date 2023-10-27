@@ -94,6 +94,9 @@ textarea {
 .mg-bottom-30px {
   margin-bottom: 30px;
 }
+.mg-bottom-90px {
+  margin-bottom: 90px;
+}
 .mg-top-5px {
   margin-top: 5px;
 }
@@ -115,12 +118,18 @@ textarea {
 .pg-top-30px {
   padding-top: 30px;
 }
+.pg-bottom-30px {
+  padding-bottom: 30px;
+}
 .pg-bottom-60px {
   padding-bottom: 60px;
 }
 .padding-right-left-60px {
   padding-left: 60px;
   padding-right: 60px;
+}
+.color-B3B3BA {
+  color: #b3b3ba;
 }
 .color-24A3FF {
   color: #24a3ff;
@@ -136,6 +145,39 @@ textarea {
 }
 .color-fff {
   color: #fff;
+}
+.background-1C4280 {
+  background: #1c4280;
+}
+.background-143646 {
+  background: #143646;
+}
+.background-F48B30 {
+  background: #f48b30;
+}
+.background-9E4DC3 {
+  background: #9e4dc3;
+}
+.background-E2E2E4 {
+  background: #e2e2e4;
+}
+.background-C71C36 {
+  background: #c71c36;
+}
+.background-DCF3F9 {
+  background: #dcf3f9;
+}
+.background-EAEAEA {
+  background: #eaeaea;
+}
+.background-282240 {
+  background: #282240;
+}
+.background-1D4568 {
+  background: #1d4568;
+}
+.background-000 {
+  background: #000;
 }
 .fw-700 {
   font-weight: 700;
@@ -197,7 +239,7 @@ textarea {
   border-radius: 24px;
 }
 .max-width-100 {
-  width: 100%;
+  width: 100% !important;
 }
 hr {
   min-width: 100%;
@@ -206,6 +248,9 @@ p {
   margin-bottom: 0;
 }
 /*-----------------------------------*/
+.main .main-left {
+  width: 50%;
+}
 .header-wrapper {
   padding-top: 50px;
   grid-template-areas:
@@ -394,10 +439,6 @@ a {
   padding: 0 30px 30px 30px;
 }
 /*-----------------------------------*/
-.about-main-left,
-.about-under-left {
-  max-width: 660px;
-}
 .about-main-right {
   border-left: 4px solid #e6e6f0;
   padding-left: 30px;
@@ -534,6 +575,39 @@ a {
   -webkit-text-fill-color: transparent;
 }
 /*-----------------------------------*/
+.main-logos .logos-wrapper {
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1700px;
+  margin: 0 auto;
+}
+.main-logos .logos-wrapper .logo-item {
+  padding: 1rem;
+  height: 120px;
+}
+.main-logos .logos-wrapper .logo-item img {
+  max-height: 100%;
+  max-width: 70%;
+  display: initial;
+}
+/*-----------------------------------*/
+.main-slide {
+  position: relative;
+  display: flex !important;
+  background-color: #f5f5fa;
+  flex: 0 0 30%;
+}
+.main-slide-img {
+  position: relative;
+  flex: 0 0 30%;
+}
+.main-image {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px 0px 0px 12px;
+}
+/*-----------------------------------*/
 .footer,
 .about-carousel,
 .publications {
@@ -622,24 +696,8 @@ a {
   .container {
     max-width: calc(1600px + 2rem);
   }
-  .card-wrapper {
-    min-width: 500px;
-  }
   .main-title {
     min-width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .form-help .main-title {
-    max-width: 100%;
-    justify-content: flex-start;
-  }
-  .form-help {
-    max-width: 100%;
-  }
-  .about-main-left,
-  .about-under-left {
-    min-width: 940px;
   }
   .about-main-wrapper .main-title,
   .about-under-right .main-title {
@@ -660,34 +718,11 @@ a {
   }
 }
 @media (min-width: 1024px) and (max-width: 1440px) {
-  .card-img {
-    max-width: 100%;
-    object-fit: cover;
-  }
-  .form-help {
-    max-width: 100%;
-  }
   .about-team-title {
     letter-spacing: 45px;
   }
 }
-@media (max-width: 1250px) {
-  .form-help {
-    max-width: 100%;
-  }
-  .about-main-left,
-  .about-under-left {
-    max-width: 480px;
-  }
-}
 @media (min-width: 768px) and (max-width: 1023px) {
-  .card-wrapper {
-    max-width: 300px;
-  }
-  .card-img {
-    width: 100%;
-    object-fit: cover;
-  }
   .cards-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -696,15 +731,15 @@ a {
     align-items: center;
     justify-content: center;
   }
-  .form-help {
-    max-width: 100%;
-  }
   .about-team-title {
     font-size: 66px;
     letter-spacing: 45px;
   }
   .about-team {
     min-height: 20vh;
+  }
+  .main .main-left {
+    min-width: 100%;
   }
 }
 @media (max-width: 992px) {
@@ -717,6 +752,9 @@ a {
   .main-services.main {
     background-size: cover;
   }
+  .main .main-left {
+    min-width: 100%;
+  }
 }
 @media (max-width: 768px) {
   .cards-wrapper {
@@ -725,10 +763,6 @@ a {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-  }
-  .card-img {
-    max-width: 100%;
-    object-fit: cover;
   }
   .header-wrapper {
     grid-gap: 30px;
@@ -756,17 +790,9 @@ a {
     align-items: center;
     justify-content: center;
   }
-  .form-help {
-    max-width: 100%;
-  }
   .about-main-wrapper,
   .about-under-wrapper {
     flex-direction: column;
-  }
-  .about-main-left,
-  .about-under-left,
-  .main-title {
-    max-width: 650px;
   }
   .about-team {
     min-height: 18vh;
@@ -786,7 +812,8 @@ a {
   .main-services-wrapper {
     padding-top: 120px;
   }
-  .main-services-wrapper-under {
+  .main-services-wrapper-under,
+  .main-slide {
     flex-direction: column;
   }
   .service-wrapper.dot {
@@ -814,13 +841,32 @@ a {
     padding-right: -1rem;
   }
   .main-nav-wrapper .nav-pills .nav-link,
-  .nav-link.active {
+  .nav-link.active,
+  .main-slide-article {
     font-size: 30px;
   }
-}
-@media (min-width: 489px) and (max-width: 677px) {
-  .form-help {
-    max-width: 100%;
+  .main-logos .logos-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .main-logos .logos-wrapper .logo-item img {
+    max-width: 50%;
+  }
+  .main-slide {
+    padding-right: 30px;
+  }
+  .main-image,
+  .main-slide-img {
+    position: unset;
+  }
+  .main-slide-img {
+    width: 100%;
+  }
+  .main-slide-article .link,
+  .main-slide-article .color-B3B3BA {
+    font-size: 14px;
+  }
+  .main-image {
+    border-radius: 12px;
   }
 }
 @media (max-width: 375px), (min-width: 375px) and (max-width: 677px) {
@@ -867,10 +913,6 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .card-img {
-    width: 100%;
-    min-height: 300px;
   }
   .footer-info,
   .footer-contact {
@@ -931,9 +973,6 @@ a {
     top: 0.5rem;
     color: #f0145a;
   }
-  .form-help {
-    width: 100%;
-  }
   .about-team {
     min-height: 16vh;
   }
@@ -966,11 +1005,13 @@ a {
   .main-services-wrapper .main-title {
     text-align: center;
   }
-  .publications-wrapper {
-    max-width: 100%;
-  }
   .publications-wrapperr {
     padding-left: 30px !important;
     padding-right: 30px !important;
+  }
+  .main-logos .logos-wrapper {
+    grid-template-columns: 100%;
+    max-height: calc(120px * 6);
+    overflow-y: auto;
   }
 }
